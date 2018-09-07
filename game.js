@@ -26,28 +26,62 @@ Called once after engine is initialized but before event-polling begins.
 [options] = an object with optional parameters; see API documentation for details.
 */
 PS.init = function (system, options) {
-    // Verify function is being called
-    PS.debug("PS.init() called\n");
+    GameManager.LoadScene(Level1);
+};
 
-    // Set grid size
-    // Call first to avoid issues
-    PS.gridSize(8, 8);
-
-    // Display message above grid
-    PS.statusText("Game");
-
-    // Other initialization code
-    // ...
+PS.touch = function (x, y, data, options) {
+    GameManager.LoadScene(Level1);
 };
 
 var Meta = {
 
 };
 
-var GameManager = {
+var Tile = {
+    brdr: 0,
+    Color_Brdr: PS.COLOR_GRAY_DARK,
+    wall: 1,
+    Color_Wall: PS.COLOR_WHITE
+};
 
+var GameManager = {
+    LoadScene: function (level) {
+        PS.gridSize(level.gridWidth, level.gridHeight);
+
+        var i, j;
+        for (i = 0; i < level.gridHeight; ++i) {
+            for (j = 0; j < level.gridWidth; ++j) {
+                switch (level.layout[level.gridWidth * i + j]) {
+                    case Tile.brdr:
+                        PS.color(j, i, Tile.Color_Brdr);
+                        break;
+                    case Tile.wall:
+                        PS.color(j, i, Tile.Color_Wall);
+                        break;
+                    default:
+                        PS.debug("Tile not recognized");
+                        break;
+                }
+            }
+        }
+    }
 };
 
 var Player = {
+    Color_Plyr: PS.COLOR_GREEN,
+    onDeath: function () {
 
+    }
+};
+
+var Checkpoint = {
+    level: Level1,
+    x: 0,
+    y: 0
+};
+
+var Level1 = {
+    gridHeight: 0,
+    gridWidth: 0,
+    layout: []
 };
