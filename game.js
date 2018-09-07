@@ -40,3 +40,14 @@ PS.init = function (system, options) {
     // ...
 };
 
+var Meta = {
+
+};
+
+var GameManager = {
+
+};
+
+var Player = {
+
+};
