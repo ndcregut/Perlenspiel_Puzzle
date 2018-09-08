@@ -2,8 +2,8 @@
 
 // jslint and jshint options
 /*jslint*/
-/*jshint -W097*/ // Removes check that "use strict" is only inside functions instead of globally
-/*global PS, Tile*/
+/*jshint -W097, esversion: 6*/ // Removes check that "use strict" is only inside functions instead of globally
+/*global PS, Tile, Checkpoint*/
 /* node: true, nomen: true, white: true */
 
 "use strict";
@@ -17,10 +17,10 @@ var Player = {
     OnDeath: function () {
 
     },
-    Update: function () {
+    Tick: function () {
 
     },
-    NewCheckpoint: function (x, y, level) {
+    UpdateCheckpoint: function (x, y, level) {
 
     },
     Gravity: function () {

@@ -2,20 +2,37 @@
 
 // jslint and jshint options
 /*jslint*/
-/*jshint -W097*/ // Removes check that "use strict" is only inside functions instead of globally
+/*jshint -W097, esversion: 6*/ // Removes check that "use strict" is only inside functions instead of globally
 /*global PS, Tile, Checkpoint*/
 /* node: true, nomen: true, white: true */
 
 "use strict";
 
-var Board1 = {
-    gridHeight: 5,
-    gridWidth: 5,
-    layout: [
-        Tile.brdr, Tile.brdr, Tile.brdr, Tile.brdr, Tile.brdr,
-        Tile.brdr, Tile.wall, Tile.wall, Tile.wall, Tile.brdr,
-        Tile.brdr, Tile.wall, Tile.wall, Tile.wall, Tile.brdr,
-        Tile.brdr, Tile.wall, Tile.wall, Tile.wall, Tile.brdr,
-        Tile.brdr, Tile.brdr, Tile.brdr, Tile.brdr, Tile.brdr,
-    ]
-};
+class Board {
+    constructor(gridHeight, gridWidth, layout, exits) {
+        this.gridHeight = gridHeight;
+        this.gridWidth = gridWidth;
+        this.layout = layout;
+        this.exits = exits;
+    }
+}
+
+function GetNextBoard(exit) {
+
+}
+
+var start = new Board();
+start.gridHeight = 10;
+start.gridWidth = 10;
+start.layout = [
+    Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall,
+    Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall,
+    Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall,
+    Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall,
+    Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall,
+    Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back,
+    Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back,
+    Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back,
+    Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back,
+    Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back
+];

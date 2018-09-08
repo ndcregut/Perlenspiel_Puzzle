@@ -2,7 +2,7 @@
 
 // jslint and jshint options
 /*jslint*/
-/*jshint -W097*/ // Removes check that "use strict" is only inside functions instead of globally
+/*jshint -W097, esversion: 6*/ // Removes check that "use strict" is only inside functions instead of globally
 /*global PS, Tile*/
 /* node: true, nomen: true, white: true */
 
@@ -15,16 +15,7 @@ var GameManager = {
         var i, j;
         for (i = 0; i < level.gridHeight; ++i) {
             for (j = 0; j < level.gridWidth; ++j) {
-                switch (level.layout[level.gridWidth * i + j]) {
-                    case Tile.brdr:
-                        PS.color(j, i, Tile.brdrColor);
-                        break;
-                    case Tile.wall:
-                        PS.color(j, i, Tile.wallColor);
-                        break;
-                    default:
-                        PS.debug("Tile not recognized");
-                }
+                PS.color(j, i, level.layout[(level.gridWidth * i + j)]);
             }
         }
     }
