@@ -2,8 +2,8 @@
 
 // jslint and jshint options
 /*jslint*/
-/*jshint -W097, esversion: 6*/ // Removes check that "use strict" is only inside functions instead of globally
-/*global PS, Tile, Checkpoint*/
+/*jshint -W097*/ // Removes check that "use strict" is only inside functions instead of globally
+/*global PS, Tile, Checkpoint, GameManager*/
 /* node: true, nomen: true, white: true */
 
 "use strict";
@@ -24,6 +24,9 @@ var Player = {
     leftDir: -1,
     rightDir: 1,
 
+    // Check if player is able to switch gravity again
+    canSwitch: true,
+
     Tick: function () {
         if (Player.CheckGrounded()) return;
 
@@ -35,14 +38,12 @@ var Player = {
 
         // Keep color of replaced tile
         Player.tileOver = PS.color(Player.x, Player.y);
-        Player.GravitySwitchOnMove();
+        
+        // Check if player is on special tile
+        Player.CheckOnPlayerMove();
 
         // Show player at new location
         PS.color(Player.x, Player.y, Player.color_Plyr);
-    },
-
-    OnDeath: function () {
-
     },
 
     Move: function (key) {
@@ -55,10 +56,35 @@ var Player = {
 
         // Keep color of replaced tile
         Player.tileOver = PS.color(Player.x, Player.y);
-        Player.GravitySwitchOnMove();
+        
+        // Check if player is on special tile
+        Player.CheckOnPlayerMove();
 
         // Show player at new location
         PS.color(Player.x, Player.y, Player.color_Plyr);
+    },
+
+    CheckOnPlayerMove: function () {
+        Player.OnDeath();
+        
+        Player.GravitySwitchOnMove();
+
+        Player.CheckPlayerCanSwitchGrav();
+        
+        Player.UpdateCheckpoint();
+    },
+
+    OnDeath: function () {
+        // Only kill player when stepping on spike
+        if (Player.tileOver !== Tile.Spke) return;
+
+        GameManager.LoadScene(Checkpoint.board);
+
+        Player.gravDown = true;
+
+        Player.x = Checkpoint.x;
+        Player.y = Checkpoint.y;
+        Player.tileOver = Tile.Chkp;
     },
 
     /**
@@ -70,7 +96,9 @@ var Player = {
     },
 
     UpdateCheckpoint: function (x, y, level) {
+        if (Player.tileOver !== Tile.Chkp) return;
 
+        Checkpoint.SetNewCheckpoint(GameManager.currentLevel);
     },
 
     /**
@@ -89,8 +117,9 @@ var Player = {
      * Does not matter if player is grounded or not
      */
     GravitySwitchOnMove: function () {
-        if (Player.tileOver === Tile.Grav) {
+        if (Player.tileOver === Tile.Grav && Player.canSwitch) {
             Player.gravDown = !Player.gravDown;
+            Player.canSwitch = false;
         }
     },
 
@@ -100,6 +129,12 @@ var Player = {
      */
     CheckGrounded: function () {
         return (PS.color(Player.x, Player.y + (Player.gravDown === true ? 1 : -1)) === Tile.Wall);
+    },
+
+    CheckPlayerCanSwitchGrav: function () {
+        if (Player.tileOver === Tile.Grav) return;
+
+        Player.canSwitch = true;
     }
 };
 

@@ -2,7 +2,7 @@
 
 // jslint and jshint options
 /*jslint*/
-/*jshint -W097, esversion: 6*/ // Removes check that "use strict" is only inside functions instead of globally
+/*jshint -W097*/ // Removes check that "use strict" is only inside functions instead of globally
 /*global PS, Tile, Checkpoint*/
 /* node: true, nomen: true, white: true */
 
@@ -28,12 +28,12 @@ start.layout = [
     Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
-    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Grav, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
-    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Chkp, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Chkp, Tile.Wall,
     Tile.Wall, Tile.Wall, Tile.Grav, Tile.Grav, Tile.Grav, Tile.Grav, Tile.Grav, Tile.Wall, Tile.Wall, Tile.Wall
 ];
 start.exits = [];

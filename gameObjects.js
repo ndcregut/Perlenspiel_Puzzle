@@ -2,8 +2,8 @@
 
 // jslint and jshint options
 /*jslint*/
-/*jshint -W097, esversion: 6*/ // Removes check that "use strict" is only inside functions instead of globally
-/*global PS, Board1*/
+/*jshint -W097*/ // Removes check that "use strict" is only inside functions instead of globally
+/*global PS, Player*/
 /* node: true, nomen: true, white: true */
 
 "use strict";
@@ -13,11 +13,17 @@ var Tile = {
     "Back": PS.COLOR_WHITE,
     "Grav": 0x6699ff,
     "Spke": 0xff0000,
-    "Chkp": 0x00cc44
+    "Chkp": PS.COLOR_VIOLET
 };
 
 var Checkpoint = {
-    level: '',
+    board: '',
     x: '',
-    y: ''
+    y: '',
+
+    SetNewCheckpoint: function (level) {
+        Checkpoint.board = level;
+        Checkpoint.x = Player.x;
+        Checkpoint.y = Player.y;
+    }
 };

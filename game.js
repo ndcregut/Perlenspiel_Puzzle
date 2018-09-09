@@ -2,8 +2,8 @@
 
 // jslint and jshint options
 /*jslint*/
-/*jshint -W097, esversion: 6*/ // Removes check that "use strict" is only inside functions instead of globally
-/*global PS, GameManager, start, Player, controls, timerKeys, heldKeys*/
+/*jshint -W097*/ // Removes check that "use strict" is only inside functions instead of globally
+/*global PS, GameManager, Checkpoint, start, Player, controls, timerKeys, heldKeys*/
 /* node: true, nomen: true, white: true */
 
 "use strict";
@@ -20,9 +20,12 @@ Called once after engine is initialized but before event-polling begins.
 [options] = an object with optional parameters; see API documentation for details.
 */
 PS.init = function (system, options) {
-    GameManager.LoadScene(start);
-    Player.tileOver = PS.color(Player.x, Player.y);
-    PS.color(Player.x, Player.y, Player.color_Plyr);
+    Checkpoint.SetNewCheckpoint(start);
+
+    // Load first scene
+    GameManager.LoadScene(Checkpoint.board);
+
+    // Start player tick timer for gravity
     PS.timerStart(5, Player.Tick);
 };
 
