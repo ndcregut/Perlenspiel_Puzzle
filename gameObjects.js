@@ -9,8 +9,8 @@
 "use strict";
 
 var Tile = {
-    "Wall": 0xffffff,
-    "Back": 0x000000,
+    "Wall": PS.COLOR_GRAY_DARK,
+    "Back": PS.COLOR_WHITE,
     "Grav": 0x6699ff,
     "Spke": 0xff0000,
     "Chkp": 0x00cc44
