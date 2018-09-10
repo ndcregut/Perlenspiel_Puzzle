@@ -12,7 +12,7 @@ var Player = {
     color_Plyr: PS.COLOR_GREEN,
 
     // X and Y coordinates of the player on grid
-    x: 1, y: 8,
+    x: 1, y: 1,
 
     // Keep track of color player is taking up
     tileOver: Tile.Back,
