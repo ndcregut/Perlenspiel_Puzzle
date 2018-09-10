@@ -12,7 +12,7 @@ var Player = {
     color_Plyr: PS.COLOR_GREEN,
 
     // X and Y coordinates of the player on grid
-    x: 8, y: 8,
+    x: 1, y: 8,
 
     // Keep track of color player is taking up
     tileOver: Tile.Back,
@@ -66,6 +66,8 @@ var Player = {
 
     CheckOnPlayerMove: function () {
         Player.OnDeath();
+
+        Player.OnExitBoard();
         
         Player.GravitySwitchOnMove();
 
@@ -78,13 +80,18 @@ var Player = {
         // Only kill player when stepping on spike
         if (Player.tileOver !== Tile.Spke) return;
 
-        GameManager.LoadScene(Checkpoint.board);
+        GameManager.LoadScene(Checkpoint.board, Checkpoint.x, Checkpoint.y);
 
         Player.gravDown = true;
+    },
 
-        Player.x = Checkpoint.x;
-        Player.y = Checkpoint.y;
-        Player.tileOver = Tile.Chkp;
+    OnExitBoard: function () {
+        var nextBoard = GameManager.currentBoard.GetNextBoard();
+
+        if (nextBoard === null) return;
+
+        var newPlayerLoc = nextBoard.GetPlayerLoc();
+        GameManager.LoadScene(nextBoard, newPlayerLoc.x, newPlayerLoc.y);
     },
 
     /**
@@ -98,7 +105,7 @@ var Player = {
     UpdateCheckpoint: function (x, y, level) {
         if (Player.tileOver !== Tile.Chkp) return;
 
-        Checkpoint.SetNewCheckpoint(GameManager.currentLevel);
+        Checkpoint.SetNewCheckpoint(GameManager.currentBoard);
     },
 
     /**

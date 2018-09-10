@@ -23,10 +23,7 @@ PS.init = function (system, options) {
     Checkpoint.SetNewCheckpoint(start);
 
     // Load first scene
-    GameManager.LoadScene(Checkpoint.board);
-
-    // Start player tick timer for gravity
-    PS.timerStart(5, Player.Tick);
+    GameManager.LoadScene(Checkpoint.board, Checkpoint.x, Checkpoint.y);
 };
 
 PS.keyDown = function (key, shift, ctrl, options) {
