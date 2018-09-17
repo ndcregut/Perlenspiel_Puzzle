@@ -120,14 +120,24 @@ hub.layout = [
 ];
 
 var keyRoom = new Board();
-keyRoom.gridHeight = 5;
-keyRoom.gridWidth = 5;
+keyRoom.gridHeight = 15;
+keyRoom.gridWidth = 15;
 keyRoom.layout = [
-    Tile.Wall, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Wall,
-    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
-    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
-    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
-    Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall
+    Tile.Wall, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Otle, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Otle, Tile.Mtle, Tile.Otle, Tile.Mtle, Tile.Otle, Tile.Mtle, Tile.Otle, Tile.Mtle, Tile.Otle, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Goal, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Otle, Tile.Mtle, Tile.Otle, Tile.Mtle, Tile.Otle, Tile.Mtle, Tile.Otle, Tile.Mtle, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Mtle, Tile.Mtle, Tile.Mtle, Tile.Mtle, Tile.Mtle, Tile.Mtle, Tile.Mtle, Tile.Mtle, Tile.Mtle, Tile.Mtle, Tile.Mtle, Tile.Wall
 ];
 
 var pitEntrance = new Board();
@@ -218,10 +228,72 @@ orangeKey.layout = [
 ];
 
 var magentaKey = new Board();
-magentaKey.gridHeight = 0;
-magentaKey.gridWidth = 0;
+magentaKey.gridHeight = 16;
+magentaKey.gridWidth = 20;
 magentaKey.layout = [
+    Tile.Wall, Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Chkp, Tile.Wall, Tile.Back, Tile.Mkey, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall,
+];
 
+var jump = new Board();
+jump.gridHeight = 20;
+jump.gridWidth = 17;
+jump.layout = [
+    Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall,
+    Tile.Wall, Tile.Grav, Tile.Grav, Tile.Grav, Tile.Grav, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Grav, Tile.Grav, Tile.Grav, Tile.Grav, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Spke, Tile.Wall, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Wall, Tile.Spke, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Wall, Tile.Spke, Tile.Grav, Tile.Grav, Tile.Grav, Tile.Spke, Tile.Wall, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Spke, Tile.Spke, Tile.Wall, Tile.Back, Tile.Wall, Tile.Spke, Tile.Spke, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall,
+];
+
+var bounce = new Board();
+bounce.gridHeight = 15;
+bounce.gridWidth = 15;
+bounce.layout = [
+    Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Grav, Tile.Grav, Tile.Grav, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Back, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Back, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall,
+    Tile.Wall, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Back, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Spke, Tile.Wall,
 ];
 
 var finish = new Board();
@@ -237,8 +309,8 @@ finish.layout = [
     Tile.Wall, Tile.Back, Tile.Back, Tile.Wall, Tile.Back, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Back, Tile.Wall, Tile.Back, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
-    Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Wall,
-    Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Wall,
+    Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Back, Tile.Wall, Tile.Wall, Tile.Back, Tile.Back, Tile.Wall,
     Tile.Wall, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Back, Tile.Wall,
@@ -286,7 +358,7 @@ hub.entrances = [
     // Left upper
     { lastBoard: pitEntrance, x: 1, y: 7 },
     // Right
-    { lastBoard: null, x: 18, y: 7 },
+    { lastBoard: magentaKey, x: 18, y: 7 },
     // Top
     { lastBoard: keyRoom, x: 9, y: 1 }
 ];
@@ -296,7 +368,7 @@ hub.exits = [
     // Left upper
     { nextBoard: pitEntrance, x: 0, y: 7 },
     // Right
-    { nextBoard: undefined, x: 19, y: 7 },
+    { nextBoard: magentaKey, x: 19, y: 7 },
     // Both exits at top of board
     { nextBoard: keyRoom, x: 9, y: 0 },
     { nextBoard: keyRoom, x: 10, y: 0 }
@@ -304,13 +376,17 @@ hub.exits = [
 
 keyRoom.entrances = [
     // Bottom
-    { lastBoard: hub, x: 1, y: 3 }
+    { lastBoard: hub, x: 1, y: 13 }
 ];
 keyRoom.exits = [
     // Bottom
-    { nextBoard: hub, x: 1, y: 4 }
+    { nextBoard: hub, x: 1, y: 14 },
     // Inner
+    { nextBoard: finish, x: 11, y: 6 }
+];
 
+finish.entrances = [
+    { lastBoard: keyRoom, x: 1, y: 1 }
 ];
 
 pitEntrance.entrances = [
@@ -378,5 +454,40 @@ orangeKey.entrances = [
 ];
 orangeKey.exits = [
     { nextBoard: pitEntrance, x: 6, y: 2 }
+];
+
+magentaKey.entrances = [
+    // Left
+    { lastBoard: hub, x: 2, y: 1 },
+    // Top entrances
+    { lastBoard: jump, x: 13, y: 1 }
+];
+magentaKey.exits = [
+    // Left
+    { nextBoard: hub, x: 0, y: 1 },
+    // Top entrances
+    { nextBoard: jump, x: 12, y: 0 },
+    { nextBoard: jump, x: 13, y: 0 },
+    { nextBoard: jump, x: 14, y: 0 }
+];
+
+jump.entrances = [
+    // Top
+    { lastBoard: bounce, x: 8, y: 1 },
+    // Bottom
+    { lastBoard: magentaKey, x: 8, y: 18 }
+];
+jump.exits = [
+    // Top
+    { nextBoard: bounce, x: 8, y: 0 },
+    // Bottom
+    { nextBoard: magentaKey, x: 8, y: 19 }
+];
+
+bounce.entrances = [
+    { lastBoard: jump, x: 7, y: 13 }
+];
+bounce.exits = [
+    { nextBoard: jump, x: 7, y: 14 }
 ];
 //#endregion

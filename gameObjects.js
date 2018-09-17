@@ -17,7 +17,8 @@ var Tile = {
     "Okey": PS.COLOR_ORANGE,
     "Otle": 0xcc3300,
     "Mkey": PS.COLOR_MAGENTA,
-    "Mtle": 0xcc0066
+    "Mtle": 0xcc0066,
+    "Goal": 0xe6e600
 };
 
 var Checkpoint = {
@@ -33,7 +34,7 @@ var Checkpoint = {
 };
 
 // Tiles that are hazardous to player
-var Hazards = [Tile.Spke, Tile.Otle, Tile.Mkey];
+var Hazards = [Tile.Spke, Tile.Otle, Tile.Mtle];
 
 // Tiles that act as keys
 var Keys = [Tile.Okey, Tile.Mkey];
