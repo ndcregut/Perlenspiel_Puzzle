@@ -187,9 +187,9 @@ var Player = {
 
 // Perform actions based on keypress
 var controls = {};
-controls[32] = Player.GravitySwitchOnKey;
-controls[97] = Player.Move;
-controls[100] = Player.Move;
+controls[32] = Player.GravitySwitchOnKey;   // Space
+controls[97] = Player.Move;                 // A
+controls[100] = Player.Move;                // D
 
 // Keep references of running timers
 var timerKeys = {};
